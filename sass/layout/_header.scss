@@ -1,0 +1,60 @@
+.header {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 5;
+    padding: $padding-small;
+    width: 100%;
+    background-color: $color-primary;
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .logo {
+        position: relative;
+        z-index: 5;
+    }
+
+    & .menu {
+        height: 2.9rem;
+        width: 3.5rem;
+        position: relative;
+        z-index: 5;
+        display: block;
+
+        @media only screen and(min-width: $medium-devices) {
+            display: none;
+        }
+
+        &__line {
+            height: .3rem;
+            width: 100%;
+            background-color: $color-secondary;
+            transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &--top {
+                &-open {
+                    transform: rotate(45deg) translateY(8px) translateX(8px);
+                }
+            }
+
+            &--mid {
+                &-open {
+                    opacity: 0;
+                }
+            }
+
+            &--bottom {
+                &-open {
+                    transform: rotate(-45deg) translateY(-10px) translateX(10px);
+                }
+            }
+        }
+    }
+}

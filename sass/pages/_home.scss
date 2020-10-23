@@ -1,0 +1,24 @@
+.buttons {
+    padding: $padding-large;
+
+    & .wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.news {
+    padding: $padding-large;
+
+    & h2 {
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+        transform: translateY(35px);
+    }
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,21 @@
+.btn {
+    background-color: $color-secondary;
+    border: none;
+    cursor: pointer;
+    color: $color-primary;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1.6rem;
+    outline: none;
+    transition: all .3s ease;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:not(:last-child) {
+        margin-right: 3.5rem;
+    }
+
+    &:hover,
+    &:active {
+        opacity: 0.75;
+    }
+}
